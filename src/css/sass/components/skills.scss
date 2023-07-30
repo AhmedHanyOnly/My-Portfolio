@@ -1,0 +1,92 @@
+.skills {
+  padding: 200px 0 100px;
+  // min-height: 100vh;
+  background-color: rgba($color: #3077e1, $alpha: 1);
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0; 
+    width: 100%;
+    height: 50px;
+    background : $main-color;   
+    mask-image: url(../images/therqal.svg);
+  }
+  h3 {
+    font-size: 62px;
+    margin: 50px 0;
+    text-align: center;
+    color: rgba($color: #fff, $alpha: 0.7);
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba($color: #ddd, $alpha: 0.3);
+    text-transform: uppercase;
+  }
+  .bg-slider {
+    // background-color: #92bdff;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+    border-top: 2px solid rgba($color: #fff, $alpha: 0.2);
+    padding: 40px;
+    margin: 100px 0;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 250px;
+      z-index: 10;
+    }
+    &::before {
+      left: 0;
+      background: linear-gradient(90deg, #adceff, #adceff, transparent);
+    }
+    &::after {
+      right: 0;
+      background: linear-gradient(270deg, #adceff, #adceff, transparent);
+    }
+    .slider {
+      white-space: nowrap;
+      animation: slider 32s infinite linear;
+      &:hover {
+        // animation-play-state: paused;
+        
+      }
+      img {
+        width: 100px;
+        margin: 0 40px;
+        &:hover {
+          img {
+            scale: 1.2;
+          }
+        }
+      }
+    }
+    @include maxWidth(sm) {
+      // padding: 20px;
+      &::before,
+      &::after {
+        width: 75px;
+      }
+      .slider {
+        img {
+          width: 80px;
+          
+        }
+      }
+    }
+  }
+}
+@keyframes slider {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

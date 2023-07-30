@@ -1,0 +1,349 @@
+.card-temp {
+  overflow: hidden;
+  padding: 200px 0 75px;
+  // min-height: 100vh;
+  background-color: $main-color;
+  .head-text {
+    padding: 20px;
+    // margin: 50px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    span {
+      color: rgba(#fff, $alpha: 0.6);
+      font-size: 24px;
+      font-weight: 600;
+    }
+    h3 {
+      margin: 0;
+      color: #f1f1f1;
+    }
+    hr {
+      border: 2px solid #93d4ff;
+      width: 400px;
+      margin: 5px 0;
+    }
+  }
+  .image {
+    transition: 0.3s;
+    @include overlay-after(#000, 0.3);
+    img {
+      width: 100%;
+      transition: 0.3s;
+    }
+    div {
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+      position: absolute;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      font-weight: 600;
+      color: #fff;
+      span {
+        a {
+          display: none;
+        }
+      }
+    }
+    &:hover {
+      &::after {
+        border-radius: 10px;
+      }
+      img {
+        border-radius: 10px;
+        border: 3px solid #fff;
+      }
+      // filter: blur(3px);
+      div {
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
+        cursor: pointer;
+        span {
+          a {
+            text-decoration: none;
+            color: rgba($color: #fff, $alpha: 0.3);
+            font-size: 35px;
+            display: block;
+            -webkit-animation: tracking-in-contract-bck 1s
+              cubic-bezier(0.215, 0.61, 0.355, 1) both;
+            animation: tracking-in-contract-bck 1s
+              cubic-bezier(0.215, 0.61, 0.355, 1) both;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+.text-content {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    P {
+      color: rgba($color: #fff, $alpha: 0.6);
+      margin: 5px;
+    }
+    h3 {
+      font-size: 35px;
+      color: #f1f1f1;
+      text-transform: uppercase;
+    }
+  }
+  .description {
+    position: relative;
+    .main {
+      color: rgba($color: #fff, $alpha: 0.6);
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.2);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba($color: #fff, $alpha: 0.5);
+      border-right: 2px solid rgba($color: #fff, $alpha: 0.2);
+      border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      z-index: 10;
+      margin: 0;
+      position: absolute;
+      left: -65px;
+      top: 0;
+    }
+    .md {
+      color: rgba($color: #fff, $alpha: 0.6);
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.2);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba($color: #fff, $alpha: 0.5);
+      border-right: 2px solid rgba($color: #fff, $alpha: 0.2);
+      border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      z-index: 10;
+      margin: 0;
+      position: absolute;
+      right: -65px;
+      top: 0;
+    }
+  }
+  .skills-card {
+    display: flex;
+    gap: 10px;
+    margin: 160px 0;
+    justify-content: end;
+    span {
+      color: rgba($color: #93d4ff, $alpha: 1);
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@include maxWidth(xll) {
+  .text-content {
+    .title {
+      P {
+        font-size: 14px;
+      }
+      h3 {
+        font-size: 30px;
+      }
+    }
+    .description {
+      .main {
+        font-size: 14px;
+      }
+      .md {
+        font-size: 14px;
+      }
+    }
+    .skills-card {
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@include maxWidth(xl) {
+  .text-content {
+    .title {
+      P {
+        font-size: 12px;
+      }
+      h3 {
+        font-size: 26px;
+      }
+    }
+    .description {
+      .main {
+        font-size: 12px;
+      }
+      .md {
+        font-size: 12px;
+      }
+    }
+    .skills-card {
+      margin: 140px 0;
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@include maxWidth(lg) {
+  .card-temp {
+    .head-text {
+      gap: 10px;
+      span {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 15px;
+      }
+      hr {
+        width: 200px;
+      }
+    }
+  }
+  .text-content {
+    .title {
+      P {
+        font-size: 12px;
+      }
+      h3 {
+        font-size: 22px;
+      }
+    }
+    .description {
+      .main {
+        font-size: 8px;
+      }
+      .md {
+        font-size: 8px;
+      }
+    }
+    .skills-card {
+      margin: 100px 0;
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@include maxWidth(md) {
+  .md-temp {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .text-content {
+    .title {
+      P {
+        font-size: 16px;
+      }
+      h3 {
+        font-size: 32px;
+      }
+    }
+    .description {
+      .main {
+        font-size: 14px;
+        left: 0;
+      }
+      .md {
+        font-size: 14px;
+        right: 0;
+      }
+    }
+    .skills-card {
+      margin: 160px 0;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@include maxWidth(sm) {
+  .card-temp {
+    hr {
+      width: 100px;
+    }
+  }
+}
+.text-content {
+  .title {
+    P {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+  }
+  .description {
+    .main {
+      font-size: 12px;
+    }
+    .md {
+      font-size: 12px;
+    }
+  }
+  .skills-card {
+    margin: 170px 0;
+    span {
+      font-size: 10px;
+    }
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-7-24 0:18:43
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+    transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

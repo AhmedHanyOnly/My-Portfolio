@@ -1,0 +1,110 @@
+.contact {
+  min-height: 100vh;
+  background-color: #3077e1;
+  padding: 100px 0 100px;
+  overflow: hidden;
+  .container-box {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba($color: #fff, $alpha: 0.5);
+    border-right: 2px solid rgba($color: #fff, $alpha: 0.2);
+    border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
+    .title {
+      padding: 0 0 20px;
+      h3 {
+        font-size: 62px;
+        text-align: center;
+        color: rgba($color: #fff, $alpha: 0.9);
+        font-weight: 900;
+        text-shadow: 0 0 10px rgba($color: #ddd, $alpha: 0.3);
+        text-transform: uppercase;
+        margin: 0;
+      }
+      p {
+        font-size: 18px;
+        // padding: 20px 0;
+        text-align: center;
+        color: rgba($color: #fff, $alpha: 0.5);
+        font-weight: 400;
+        text-shadow: 0 0 10px rgba($color: #ddd, $alpha: 0.3);
+      }
+    }
+    .box-social {
+      .contact-info {
+        .box {
+          display: flex;
+          padding: 10px;
+          .text {
+            padding: 15px 0 0px;
+            span {
+              color: rgba($color: #fff, $alpha: 0.9);
+            }
+            p {
+              color: rgba($color: #9bdbff, $alpha: 1);
+            }
+          }
+          .icon-social {
+            color: #fff;
+            width: 50px;
+            font-size: 32px;
+            margin: auto 10px;
+          }
+        }
+      }
+    }
+    .box-inputs {
+      .form {
+        input {
+          background: rgba($color: #fff, $alpha: 0.5);
+          border: 3px solid rgba($color: #fff, $alpha: 0.5);
+          border-right: 2px solid rgba($color: #fff, $alpha: 0.2);
+          border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+          box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.1);
+          color: #fff;
+          // border-radius: 20px;
+          &::placeholder {
+            color: #fff;
+            font-weight: 400;
+          }
+        }
+        textarea {
+          background: rgba($color: #fff, $alpha: 0.5);
+          border: 3px solid rgba($color: #fff, $alpha: 0.5);
+          border-right: 2px solid rgba($color: #fff, $alpha: 0.2);
+          border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+          box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.1);
+          color: #fff;
+          &::placeholder {
+            color: #fff;
+            font-weight: 400;
+          }
+        }
+      }
+      button {
+        width: 200px;
+        padding: 15px;
+        margin: 10px 20px;
+        border-radius: 8px;
+        border: 1px solid #fff;
+        background: linear-gradient(45deg, #9bdbff, $main-color, #005dad);
+        color: #fff;
+        font-weight: 600;
+        transition: 0.3s;
+        .icon-social {
+          font-size: 26px;
+          margin: 0 5px;
+          transition: 0.3s;
+        }
+        &:hover {
+          background: linear-gradient(45deg, #9bdbff, $main-color);
+          .icon-social {
+            transform: translate(3px, -5px);
+          }
+        }
+      }
+    }
+  }
+}

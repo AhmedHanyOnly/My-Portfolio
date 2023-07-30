@@ -1,0 +1,31 @@
+body {
+  font-family: 'Rubik', sans-serif !important;
+  color: black;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  direction: ltr;
+}
+::-webkit-scrollbar{
+  width: 12px
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(transparent, #3586ff, #3586ff);
+  border-radius: 5px;
+  border: 1px solid rgba($color: #fff, $alpha: 0.5);
+  // box-shadow: 0 0 10px #3586ff;
+  
+
+}
+// All Rest
+* {
+  @include all-reset;
+}
+// a Reset
+a {
+  @include a-reset;
+}
+// reset btn
+button {
+  border: none;
+  outline: none;
+}

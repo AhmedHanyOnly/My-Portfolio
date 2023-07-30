@@ -1,0 +1,239 @@
+.project {
+  background-color: rgba($color: #3077e1, $alpha: 1);
+  padding: 150px 0 100px;
+  min-height: 100vh;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0; 
+    width: 100%;
+    height: 50px;
+    background : $main-color;   
+    mask-image: url(../images/therqal.svg);
+    color: #3077e1;
+  }
+  h3 {
+    font-size: 62px;
+    margin: 50px 0;
+    text-align: center;
+    color: rgba($color: #fff, $alpha: 0.7);
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba($color: #ddd, $alpha: 0.3);
+    text-transform: uppercase;
+  }
+  .menu {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.2);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+      border-top: 2px solid rgba($color: #fff, $alpha: 0.2);
+      margin: 100px 0;
+      transition: 0.5s;
+      .item {
+        padding: 10px 20px;
+        margin: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid rgba($color: #fff, $alpha: 0.2);
+        background: rgba($color: #fff, $alpha: 0.3);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: capitalize;
+        user-select: none;
+        cursor: pointer;
+        position: relative;
+        transition: 0.2s;
+        span {
+          position: inherit;
+          z-index: 999;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 0;
+          background: $main-color;
+          z-index: 3;
+          transition: 0.3s;
+        }
+        &:hover {
+          border: 2px solid #fff;
+          box-shadow: 0px 0px 25px rgba($color: #000000, $alpha: 0.2);
+          &::before {
+            height: 100%;
+          }
+        }
+        &.active {
+          background-color: $main-color;
+          border: 3px solid #fff;
+        }
+      }
+      @include maxWidth(lg){
+        .item{
+          font-size: 14px;
+        }
+      }
+      @include maxWidth(md){
+        .item{
+          font-size: 12px;
+          padding: 7px;
+        }
+      }
+      @include maxWidth(md){
+        .item{
+          font-size: 10px;
+          padding: 5px;
+          margin: 5px 10px;
+        }
+      }
+    }
+    .content {
+      display: none;
+      .box {
+        overflow: hidden;
+        position: relative;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.2);
+        backdrop-filter: blur(10px);
+        border: 3px solid rgba($color: #fff, $alpha: 0.5);
+        border-radius: 10px;
+        transition: 1s;
+        margin: 10px 0;
+        &:hover {
+          .title-box {
+            top: 0;
+          }
+        }
+        .title-box {
+          transition: 0.3s;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(3px);
+          z-index: 3;
+          top: 100%;
+          h3 {
+            font-size: 20px;
+            margin: 30px 0;
+          }
+          .skills-projects {
+            width: 30px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-300%);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            transition: 0.3s;
+            img {
+              width: 100%;
+            }
+          }
+          .text {
+            display: block;
+            text-align: center;
+            margin-top: 80px;
+            a {
+              text-decoration: none;
+              color: rgba($color: #fff, $alpha: 0.3);
+              font-size: 18px;
+              font-weight: 600;
+            }
+          }
+          @include maxWidth(xll) {
+            h3 {
+              font-size: 18px;
+              margin: 20px 0;
+            }
+          }
+          @include maxWidth(xl) {
+            h3 {
+              font-size: 16px;
+              margin: 20px 0;
+            }
+            .skills {
+              width: 25px;
+              gap: 10px;
+            }
+            .text {
+              margin-top: 60px;
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+          @include maxWidth(lg) {
+            h3 {
+              font-size: 18px;
+              margin: 20px 0;
+            }
+            .skills {
+              width: 30px;
+              gap: 10px;
+            }
+            .text {
+              margin-top: 70px;
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+          @include maxWidth(md) {
+            h3 {
+              font-size: 32px;
+              margin: 40px 0;
+            }
+            .skills {
+              width: 40px;
+              gap: 10px;
+            }
+            .text {
+              margin-top: 100px;
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+          @include maxWidth(sm) {
+            h3 {
+              font-size: 26px;
+              margin: 20px 0;
+            }
+            .skills {
+              width: 35px;
+              gap: 10px;
+            }
+            .text {
+              margin-top: 70px;
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .image {
+          @include overlay-after(#000, 0.2);
+          &::after {
+            border-radius: 10px;
+          }
+          img {
+            width: 100%;
+            border-radius: 10px;
+          }
+        }
+      }
+      &.show {
+        display: block;
+      }
+    }
+  }
+}

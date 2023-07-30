@@ -1,0 +1,293 @@
+//landing
+.con-land {
+  position: relative;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #3586ff;
+  overflow: hidden;
+  z-index: 99;
+  .con-landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 600px;
+    .social-icon {
+      font-size: 20px;
+      .github-i {
+        color: #f6f6f6;
+        transition: 0.3s;
+        &:hover {
+          transform: translateX(10px);
+          scale: 1.2;
+          color: #303030;
+          filter: blur(0.5px);
+        }
+      }
+      .insta-i {
+        color: #f6f6f6;
+        transition: 0.3s;
+        &:hover {
+          transform: translateX(10px);
+          scale: 1.2;
+          color: #c92bb7;
+          filter: blur(0.5px);
+        }
+      }
+      .linked-i {
+        color: #f6f6f6;
+        transition: 0.3s;
+        &:hover {
+          transform: translateX(10px);
+          scale: 1.2;
+          color: #00faff;
+          filter: blur(0.5px);
+        }
+      }
+    }
+    .head-text {
+      p {
+        color: #93d4ff;
+        font-size: 18px;
+        span {
+          // background: linear-gradient(180deg, rgb(211, 224, 255));
+          // background-clip: text;
+          color: #f6f6f6;
+          font-size: 20px;
+          font-weight: 800;
+        }
+      }
+      h3 {
+        font-size: 50px;
+        color: #f6f6f6;
+        font-weight: 800;
+      }
+    }
+    .animate-icon {
+      position: relative;
+      .image-icon {
+        position: absolute;
+        height: 170%;
+        right: -100px;
+        bottom: -80px;
+        z-index: 999;
+        animation: image-icon 8s linear infinite alternate;
+        transition: 0.3s;
+      }
+      &:hover {
+        .icons {
+          i {
+            &:nth-child(1) {
+              filter: drop-shadow(0 0 50px #f6f6f6);
+              border-color: #f6f6f6;
+            }
+            &:nth-child(2) {
+              filter: drop-shadow(0 0 50px #35b5ff);
+              border-color: #35b5ff;
+            }
+            &:nth-child(3) {
+              filter: drop-shadow(0 0 54% #003bd4);
+              border-color: #003bd4;
+            }
+          }
+        }
+      }
+      .icons {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        i {
+          transition: 0.5s;
+          &:nth-child(1) {
+            position: absolute;
+            border: 5px solid #d3d3d3;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            display: block;
+            animation: animate-1 4s linear infinite;
+            inset: 0;
+          }
+          &:nth-child(2) {
+            border: 5px solid #ddd;
+            position: absolute;
+            display: block;
+            inset: 0;
+            animation: animate-2 6s linear infinite;
+            border-radius: 74% 26% 46% 54% / 30% 54% 46% 70%;
+          }
+          &:nth-child(3) {
+            border: 5px solid #ddd;
+            position: absolute;
+            display: block;
+            inset: 0;
+            border-radius: 57% 43% 76% 24% / 36% 61% 39% 64%;
+            animation: animate-3 8s linear infinite alternate;
+          }
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .icons {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 767px) {
+        .image-icon {
+          height: 150%;
+          right: -200px;
+          .icons {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .image-icon {
+          right: -135px;
+        }
+        .icons {
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .image-icon {
+          height: 170%;
+          right: -135px;
+        }
+        .icons {
+          width: 250px;
+          height: 250px;
+        }
+      }
+      @media screen and (min-width: 1300px) {
+        .image-icon {
+          right: -100px;
+        }
+        .icons {
+        }
+      }
+    }
+    @include maxWidth(sm) {
+      flex-direction: row-reverse;
+      .social-icon {
+        font-size: 14px;
+        .github-i {
+          // display: none;
+        }
+        .linked-i {
+          // display: none;
+        }
+        .insta-i {
+          // display: none;
+        }
+      }
+      .head-text {
+        p {
+          font-size: 12px;
+          line-height: 2;
+          max-width: 230px;
+          span {
+            font-size: 14px;
+          }
+        }
+        h3 {
+          font-size: 30px;
+        }
+        a {
+        }
+      }
+      
+    }
+  }
+}
+@keyframes animate-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes image-icon {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  35% {
+    transform: translate(20px, -10px);
+  }
+  70% {
+    transform: translate(-25px, 10px);
+  }
+  100% {
+    transform: translate(-5px, -20px);
+  }
+}
+section .air {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+  background-size: 1000px 100px;
+}
+section .air.air1 {
+  animation: wave 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .air.air2 {
+  animation: wave2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .air.air3 {
+  animation: wave 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+section .air.air4 {
+  animation: wave2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes wave {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes wave2 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}

@@ -1,0 +1,46 @@
+// Use Mixins
+@import "./sass/helpers/mixins";
+//global reset
+@import "./sass/pages/globalPage";
+//color picker
+@import "./sass/helpers/colors-pickup.scss";
+//header style
+@import "./sass/layout/header.scss";
+//landing bg
+@import "./sass/layout/landing-bg.scss";
+//use footer
+@import "./sass/layout/footer.scss";
+//about page
+@import "./sass/components/about.scss";
+//use skills
+@import "./sass/components/skills.scss";
+//use skills
+@import "./sass/components/project.scss";
+//use card-temp
+@import "./sass/components/card.scss";
+//use experience
+@import "./sass/components/experience.scss";
+//use contact
+@import "./sass/components/contact.scss";
+//transition
+.transition{
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+}
+.one{
+  background-color: #5f93e1;
+  z-index: 99;
+}
+.two{
+  background-color: #fff;
+  z-index: 98;
+}
+.three{
+  background-color: #a1b6d6;
+  z-index: 97;
+}

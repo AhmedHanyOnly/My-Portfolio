@@ -1,0 +1,275 @@
+.about {
+  background-color: $main-color;
+
+
+  overflow: hidden;
+  .about-content {
+    margin: 200px 0 ;
+    @include maxWidth(md) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  // .text-header {
+    // margin: 50px 0;
+  //   padding: 50px 20px;
+  //   opacity: 0;
+  //   @include maxWidth(lg) {
+  //     padding: 30px 20px;
+  //   }
+  //   h3 {
+  //     font-size: 75px;
+  //     font-weight: 800;
+  //     color: #5197ff;
+  //   }
+  // }
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba($color: #fff, $alpha: 0.5);
+    border-right: 2px solid rgba($color: #fff, $alpha: 0.2);
+    border-bottom: 2px solid rgba($color: #fff, $alpha: 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
+    z-index: 10;
+    position: relative;
+  }
+  .animate-icon {
+    position: relative;
+    .image-icon {
+      height: 100%;
+      position: absolute;
+      z-index: 900;
+      animation: image-icon 8s linear infinite alternate;
+      transition: 0.3s;
+    }
+    .icon {
+      position: absolute;
+      z-index: 1;
+      transition: 0.3s;
+    }
+    .camera {
+      left: 514px;
+      top: -124px;
+    }
+    .git {
+      left: -16px;
+      top: 328px;
+      width: 135px;
+    }
+    .react {
+      right: -110px;
+      top: 273px;
+      width: 168px;
+    }
+    .rectangle {
+      left: 280px;
+      top: 382px;
+      width: 120px;
+    }
+    .twitter {
+      left: 0;
+      top: -105px;
+      width: 150px;
+    }
+    @include maxWidth(xl) {
+      align-items: center;
+      .image-icon {
+        height: 65%;
+      }
+      .icons {
+        width: 300px;
+        height: 300px;
+      }
+      .camera {
+        left: 400px;
+        top: -75px;
+        width: 150px;
+      }
+      .git {
+        left: -66px;
+        top: 350px;
+        width: 110px;
+      }
+      .react {
+        right: -99px;
+        top: 351px;
+        width: 120px;
+      }
+      .rectangle {
+        left: 185px;
+        top: 415px;
+        width: 85px;
+      }
+      .twitter {
+        left: -53px;
+        top: -45px;
+        width: 125px;
+      }
+    }
+    @include maxWidth(lg) {
+      .image-icon {
+        height: 50%;
+      }
+      .icons {
+        width: 200px;
+        height: 200px;
+      }
+      .camera {
+        left: 315px;
+        top: 0px;
+        width: 120px;
+      }
+      .git {
+        left: -66px;
+        top: 387px;
+        width: 115px;
+      }
+      .react {
+        right: -108px;
+        top: 380px;
+        width: 115px;
+      }
+      .rectangle {
+        left: 140px;
+        top: 445px;
+
+        width: 95px;
+      }
+      .twitter {
+        left: -46px;
+        top: 9px;
+        width: 115px;
+      }
+    }
+    @include maxWidth(md) {
+      .image-icon {
+        height: 100%;
+      }
+      .icons {
+        width: 300px !important;
+        height: 300px !important;
+      }
+      .camera {
+        left: 471px;
+        top: -110px;
+        width: 125px;
+      }
+      .git {
+        left: -91px;
+        top: 190px;
+        width: 135px;
+      }
+      .react {
+        right: -114px;
+        top: 166px;
+        width: 141px;
+      }
+      .rectangle {
+        left: 190px;
+        top: 284px;
+        width: 101px;
+      }
+      .twitter {
+        left: -61px;
+        top: -109px;
+        width: 130px;
+      }
+    }
+    @include maxWidth(sm) {
+      .image-icon {
+        height: 90%;
+      }
+      .icons {
+        width: 200px !important;
+        height: 200px !important;
+      }
+      .camera {
+        left: 270px;
+        top: -110px;
+        width: 86px;
+      }
+      .git {
+        left: -38px;
+        top: 156px;
+        width: 85px;
+      }
+      .react {
+        right: -13px;
+        top: 154px;
+        width: 95px;
+      }
+      .rectangle {
+        left: 140px;
+        top: 212px;
+        width: 60px;
+      }
+      .twitter {
+        left: -5px;
+        top: -91px;
+        width: 85px;
+      }
+    }
+    &:hover {
+      .icons {
+        i {
+          &:nth-child(1) {
+            filter: drop-shadow(0 0 50px #f6f6f6);
+            border-color: #f6f6f6;
+          }
+          &:nth-child(2) {
+            filter: drop-shadow(0 0 50px #35b5ff);
+            border-color: #35b5ff;
+          }
+          &:nth-child(3) {
+            filter: drop-shadow(0 0 54% #003bd4);
+            border-color: #003bd4;
+          }
+        }
+      }
+    }
+    .icons {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      i {
+        transition: 0.5s;
+        &:nth-child(1) {
+          position: absolute;
+          border: 5px solid #d3d3d3;
+          border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+          display: block;
+          animation: animate-1 4s linear infinite;
+          inset: 0;
+        }
+        &:nth-child(2) {
+          border: 5px solid #ddd;
+          position: absolute;
+          display: block;
+          inset: 0;
+          animation: animate-2 6s linear infinite;
+          border-radius: 74% 26% 46% 54% / 30% 54% 46% 70%;
+        }
+        &:nth-child(3) {
+          border: 5px solid #ddd;
+          position: absolute;
+          display: block;
+          inset: 0;
+          border-radius: 57% 43% 76% 24% / 36% 61% 39% 64%;
+          animation: animate-3 8s linear infinite alternate;
+        }
+      }
+    }
+  }
+  h3 {
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  p {
+    color: #93d4ff;
+    font-size: 18px;
+  }
+}
