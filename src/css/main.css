@@ -1425,7 +1425,7 @@ section .air.air4 {
   }
 }
 .experience {
-  min-height: 215vh;
+  min-height: 173vh;
   background-color: #3586ff;
   position: relative;
 }
