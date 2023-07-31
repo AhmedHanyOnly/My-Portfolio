@@ -9,7 +9,7 @@ const Card = () => {
       <div className="container">
         <div className="head-text">
           <span>01.</span>
-          <h3>some think i have build</h3>
+          <h3>some things that i've built</h3>
           <hr />
         </div>
         <div className="row g-3">
