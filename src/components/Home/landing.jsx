@@ -54,8 +54,8 @@ const Landing = () => {
               position to create innovative and responsive websites.
             </p>
             <a
-              href="../../files/AhmedHanyRamadanResume (1).pdf"
-              download
+              href="https://drive.google.com/file/d/1YnyWWTQDB0hqYLr1ZseG4dGgxcpywMMX/view?usp=sharing"
+              
               className="btn btn-outline-info text-light"
             >
               Download CV
